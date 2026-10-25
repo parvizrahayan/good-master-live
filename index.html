@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<meta name="description" content="کارگاه زنده: بازار عامل‌های هوش مصنوعی و مسیر کسب درآمد، با دستیار پایگاه دانش">
+<meta property="og:title" content="ارباب خوب · کارگاه زنده"><meta property="og:description" content="مسیر گره‌به‌گره از پیک تا غرفهٔ درآمدزا، با شبیه‌ساز و دستیار"><meta property="og:type" content="website"><meta property="og:image" content="https://parvizrahayan.github.io/good-master-live/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<title>ارباب خوب · کارگاه زنده</title>
+<style>
+:root{--bg:#060B16;--pn:#0E1626;--ln:#1B2A44;--cy:#00E5FF;--go:#C8A24A;--pk:#FF3D81;--tx:#E8EEF7;--mu:#8FA0B8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F3F6FB;--pn:#FFFFFF;--ln:#D5DEEC;--cy:#006C80;--go:#8A6A1E;--pk:#C21858;--tx:#0B1424;--mu:#4A5B75;color-scheme:light}}
+:root[data-theme="dark"]{color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:Tahoma,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx);display:grid;grid-template-rows:auto 1fr auto;line-height:1.7}
+header{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--ln)}
+.brand{font-size:20px;font-weight:700;color:var(--go);margin-inline-end:auto}
+.seg{display:flex;border:1px solid var(--ln);border-radius:8px;overflow:hidden}
+button{font:inherit;color:var(--tx);background:var(--pn);border:1px solid var(--ln);border-radius:8px;padding:6px 12px;cursor:pointer}
+.seg button{border:0;border-radius:0}
+button:hover{border-color:var(--cy)}button:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+button.on{background:var(--cy);color:var(--bg);font-weight:700}
+main{display:grid;grid-template-columns:230px minmax(0,1fr) 370px;gap:16px;padding:16px 20px;min-height:0}
+section,aside{background:var(--pn);border:1px solid var(--ln);border-radius:12px;padding:16px;min-height:0;overflow:auto}
+nav h3{font-size:13px;color:var(--mu);font-weight:400;margin:12px 0 6px}
+nav button{display:block;width:100%;text-align:start;margin-bottom:6px;font-size:14px}
+article h1{font-size:clamp(24px,3vw,36px);line-height:1.4;margin-bottom:6px}
+.kick{color:var(--mu);font-size:14px;margin-bottom:14px}
+article p{font-size:18px;margin-bottom:14px;max-width:60ch;border-inline-start:3px solid var(--cy);padding-inline-start:14px}
+article p.l2{border-color:var(--go)}
+.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.rel b{width:100%;font-size:13px;color:var(--mu);font-weight:400}
+#chat{display:grid;grid-template-rows:auto 1fr auto;gap:10px}
+#chat h2{font-size:16px;color:var(--go)}
+#log{display:flex;flex-direction:column;gap:10px;overflow:auto;min-height:120px}
+.m{padding:10px 12px;border-radius:10px;font-size:15px;white-space:pre-wrap;max-width:95%}
+.u{background:var(--ln);align-self:flex-start}
+.a{border:1px solid var(--cy);align-self:flex-start}
+.src{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.src button{font-size:12px;padding:3px 8px}
+#f{display:flex;gap:8px}
+#q{flex:1;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:8px}
+#q:focus-visible{outline:2px solid var(--cy)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips button{font-size:12px;padding:3px 8px}
+[hidden]{display:none!important}
+.view #tch,.view #f,.view #ch,.view #chat label,.view #mode,.view #depth{display:none!important}.view #sim input,.view #sim select,.view #sim button{pointer-events:none}.view #chat h2::after{content:" · مشاهده";color:var(--mu)}
+.sp{margin-top:18px;border-top:1px solid var(--ln);padding-top:14px}.sp h2{font-size:16px;color:var(--go);margin-bottom:8px}
+.fld{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;align-items:end}.fld label{font-size:13px;color:var(--mu);display:grid;gap:4px}
+.fld input,.fld select{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:6px 8px;width:150px}
+.fld input:focus-visible,.fld select:focus-visible{outline:2px solid var(--cy)}
+pre{background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:12px;direction:ltr;text-align:left;overflow:auto;font-size:13px;white-space:pre-wrap;margin:10px 0}
+.cd{border:1px solid var(--ln);border-radius:10px;padding:14px;margin-bottom:14px}.cd h2{font-size:18px;color:var(--go)}
+.hint{color:var(--mu);font-size:14px}
+@media(max-width:1000px){body{height:auto}main{grid-template-columns:1fr}section,aside{overflow:visible}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><div class="brand">ارباب خوب · کارگاه زنده</div>
+<span id="st" class="hint"></span><button id="bk" hidden>برگشت به مجری</button><div class="seg" id="mode"><button data-m="n" class="on">گره‌ها</button><button data-m="s">شبیه‌سازها</button></div>
+<div class="seg" id="depth" role="group" aria-label="عمق توضیح"></div></header>
+<main>
+<section><nav id="nav"></nav></section>
+<section><article id="rd"></article><div id="tch" class="sp"></div><div id="sim" hidden></div></section>
+<aside id="chat"><h2>دستیار پایگاه دانش</h2><div id="log" aria-live="polite"></div>
+<div><label class="hint">سطح مخاطب <select id="lv" style="font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:4px"><option>مبتدی و بدون پیش‌زمینه</option><option selected>کسب‌وکار</option><option>فنی</option></select></label><div class="chips" id="ch"></div><form id="f"><input id="q" placeholder="از پایگاه دانش بپرس…" autocomplete="off"><button class="on">بپرس</button></form></div></aside>
+</main>
+<footer style="padding:6px 20px;color:var(--mu);font-size:13px;display:flex;justify-content:space-between;align-items:center"><span>ارادتمند، پرویز معین</span><button id="vb" style="padding:2px 10px">v1</button></footer>
+<dialog id="cl" style="background:var(--pn);color:var(--tx);border:1px solid var(--go);border-radius:12px;padding:20px;max-width:420px"><h2 style="font-size:16px;color:var(--go)">تاریخچهٔ تغییرات</h2><p style="margin:10px 0">v1: نقشهٔ گره‌ها، شبیه‌سازها، نقشهٔ تدریس، دستیار پایگاه دانش، نمای زندهٔ مجری و مخاطب.</p><button onclick="this.closest('dialog').close()">بستن</button></dialog>
+<script src="config.js"></script>
+<script>
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+const KB=[
+{id:'pik',g:'مسیر پیک',t:'پیک و مأموریت',r:['price','mandate'],x:['پیک یک عامل هوش مصنوعی است که باید یک گزارش بازار بخرد، با سقف ۵ دلار.','او کارت بانکی ندارد، فرم پر نمی‌کند و کسی هر خرید را تأیید نمی‌کند. پس به قیمت روشن، راه پرداخت، اطمینان از فروشنده و سقف خرج نیاز دارد.','اصطکاکی که برای انسان مانع بود (ثبت‌نام، فرم، اشتراک) برای ماشین حذف می‌شود. پرداخت به‌ازای هر بار استفاده انجام می‌شود و سقف از پیش تعیین شده است.']},
+{id:'report',g:'مسیر پیک',t:'گزارش چیست و پیک در چه ساختاری کار می‌کند؟',r:['mandate','price'],x:['«گزارش بازار» یک محصول داده است که فروشنده آن را پشت یک نشانی اینترنتی می‌فروشد؛ نمونه: قیمت و موجودی ۵۰ فروشگاه برای یک دستهٔ کالا در هفتهٔ گذشته، به شکل JSON ساختاریافته.','پیک آن را می‌خرد چون صاحب‌کار (ارباب) برای تصمیمی مثل قیمت‌گذاری یا انتخاب تأمین‌کننده به آن نیاز دارد و خودش داده را ندارد؛ خرید به‌ازای هر بار استفاده از اشتراک ماهانه ارزان‌تر است. در دموی کارگاه، فروشنده و گزارش شبیه‌سازی‌شده‌اند، نه یک فروشندهٔ واقعی.','پیکره‌بندی پیک پنج بخش دارد: ۱) مأموریت و قرارداد از ارباب (هدف، سقف ۵ دلار، مدت، قاعدهٔ تأیید). ۲) عامل: یک مدل زبانی با دستورالعمل و ابزار (مثلاً در چارچوب‌هایی مثل CrewAI). ۳) ابزار HTTP که پاسخ ۴۰۲ را بفهمد و پرداخت کند. ۴) کیف‌پول یا حساب سازمانی با سقف مصرف. ۵) سیاست‌ها: قیمت را پیش از پرداخت با سقف بسنج، فقط از فروشندگان مجاز بخر، همه‌چیز را لاگ کن. این ساختار نمایشی آموزشی است؛ قالب واقعی هر پروتکل (x402، AP2) مخصوص خودش است.']},
+{id:'discover',g:'مسیر پیک',t:'ایستگاه ۱: پیدا کردن',r:['pik','goods'],x:['پیک فقط غرفه‌هایی را می‌بیند که خودشان را برای ماشین معرفی کرده‌اند.','MCP عامل را به ابزار و داده وصل می‌کند و A2A گفت‌وگوی عامل با عامل را ممکن می‌کند. غرفه‌ای که پیدا نشود فروش ندارد.','این همان سئو است، فقط برای عامل‌ها. پرسش برای مخاطب: اگر کسب‌وکارتان فردا از دید عامل‌ها دیده نشود، چه چیزی از دست می‌دهید؟']},
+{id:'price',g:'مسیر پیک',t:'ایستگاه ۲: قیمت و کد ۴۰۲',r:['mandate','reality'],x:['کد ۴۰۲ در HTTP یعنی «پرداخت لازم است»؛ x402 آن را زنده کرده است.','پیک درخواست می‌دهد، سرور با ۴۰۲ و قیمت جواب می‌دهد، پیک با سقفش مقایسه و پرداخت می‌کند و داده را می‌گیرد.','قیمت‌گذاری به‌ازای هر بار استفاده برای فروشنده درآمد دقیق و برای خریدار بدون تعهد است. در دموی محلی، اثبات پرداخت یک‌بارمصرف است تا یک پرداخت هزار بار استفاده نشود.']},
+{id:'mandate',g:'مسیر پیک',t:'ایستگاه ۳: مهر اجازه',r:['contract','stack'],x:['مهر اجازه سه چیز دارد: موضوع، سقف و مدت.','AP2 (گوگل) این اجازه را mandate می‌نامد و TAP (ویزا) هویت عامل را در سرآیند درخواست امضا می‌کند.','جملهٔ کلیدی: بدون اجازه اعتماد نیست و بدون اعتماد پول جابه‌جا نمی‌شود.']},
+{id:'settle',g:'مسیر پیک',t:'ایستگاه ۴: تسویه و برگشت‌ناپذیری',r:['redlines','doors'],x:['کارت قابل‌بازگشت است؛ استیبل‌کوین ارزان و ماشینی ولی برگشت‌ناپذیر.','طبق ویزا هنوز راه جاافتاده‌ای برای بازگرداندن پرداخت اشتباه در زنجیرهٔ عامل‌ها نیست؛ بسیاری از جریان‌ها از هر دو ریل استفاده می‌کنند.','نتیجه: کنترل باید پیش از پرداخت باشد (مهر و سقف). برای خرید فروشگاهی کارت مناسب‌تر است و برای هزاران ریزپرداخت ماشینی اقتصادی نیست.']},
+{id:'goods',g:'مسیر پیک',t:'ایستگاه ۵: خرید کالا',r:['stalls','discover'],x:['پروتکل‌های خرید کالا برای عامل: ACP و UCP.','سپتامبر ۲۰۲۵ ACP و Instant Checkout (OpenAI و Stripe)؛ ژانویه ۲۰۲۶ UCP (گوگل و Shopify). ۲۴ مارس ۲۰۲۶ OpenAI چک‌اوت درون گفتگو را برداشت و Shopify فروشگاه‌ها را پیش‌فرض برای عامل‌ها قابل‌کشف کرد.','درس: روی یک نام شرط نبندید؛ داده و فید مرتب هر پروتکلی را پشتیبانی می‌کند.']},
+{id:'reality',g:'واقعیت و مرز',t:'بازار چقدر واقعی است؟',r:['doors','stalls'],x:['تراکنش زیاد است ولی پول کم؛ زیرساخت از تقاضا جلوتر است.','عدد خام تا آوریل ۲۰۲۶: حدود ۱۶۵ میلیون تراکنش و ۵۰ میلیون دلار. عدد تعدیل‌شدهٔ ویزا و Artemis: حدود ۱۹ میلیون دلار از ۱۳۴ میلیون تراکنش.','حدود ۴ هزار کیف‌پول (۱٪ خریداران) حدود ۹۰٪ حجم تعدیل‌شده را می‌سازند. Solana در میانهٔ اوت ۲۰۲۶ حدود ۷۰٪ حجم ماهانهٔ x402 بود. ارقام تقریبی و به نقل از گزارش‌هاست؛ پیش از ارائه دوباره بررسی شود.']},
+{id:'doors',g:'واقعیت و مرز',t:'سه در قفل‌شده',r:['settle','mandate'],x:['برگشت‌ناپذیری، هویت و اعتماد، و دسترسی.','راه‌حل‌ها: سقف و مهر پیش از پرداخت؛ AP2 و TAP؛ بررسی قانونی و مشتری بومی.','برخی ریل‌ها (مثل Stripe) برای ایرانیان در دسترس نیست. این مشاورهٔ حقوقی نیست؛ قوانین و تحریم‌ها جداگانه بررسی شود.']},
+{id:'schools',g:'ارباب خوب',t:'سه مکتب اقتصاد عامل',r:['stack','contract'],x:['Coinbase: عامل خودش پول دارد. Enterprise: عامل فقط مجاز به خرج است. Web3: عامل‌ها اقتصاد مستقل می‌سازند.','Coinbase اختیار و ریسک بالا (x402، Base)، Enterprise اختیار کم تا متوسط (Payman)، Web3 اختیار بسیار بالا و ریسک تجربی (Fetch.ai، SingularityNET).','ضعف‌ها: پرداخت اشتباه برگشت‌ناپذیر، کندی و هزینهٔ حاکمیتی، پیچیدگی و نبود حاکمیت روشن. شعار: به عامل مأموریت بده، مرز بده، اعتماد بساز.']},
+{id:'stack',g:'ارباب خوب',t:'پشتهٔ ۵ لایه',r:['schools','redlines'],x:['هویت، مجوز، پرداخت، تجارت، حاکمیت.','هویت: آدرس روی Base یا هویت سازمانی. مجوز: سقف و تأیید انسانی. پرداخت: x402 یا Payman. تجارت: API ماشین‌خوان. حاکمیت: لاگ و اعتبار.','ایستگاه‌ها را به لایه‌ها وصل کن: مهر اجازه برابر مجوز، قیمت و ۴۰۲ برابر پرداخت، پیدا کردن برابر تجارت.']},
+{id:'contract',g:'ارباب خوب',t:'قرارداد مأموریت',r:['mandate','schools'],x:['قرارداد: مأموریت، سقف، مدت و مکتب.','نمونه برای پیک: خرید گزارش بازار، سقف ۵ دلار، ۶۰ دقیقه، تأیید انسانی بالای ۲ دلار، عامل مالک پول نیست.','تغییر مکتب، قرارداد را عوض می‌کند: در Enterprise تأیید انسانی و لاگ غیرقابل‌پنهان اضافه می‌شود؛ در Coinbase عامل کیف‌پول دارد و ریسک بالاتر است.']},
+{id:'redlines',g:'ارباب خوب',t:'خطوط قرمز',r:['stack','settle'],x:['خرج بدون سقف ممنوع است.','ممنوع: مالکیت پول توسط عامل در مکتب سازمانی، پنهان‌کردن لاگ، دستکاری اعتبار با قرارداد مخفی.','ممنوع: استفادهٔ دوباره از اثبات پرداخت و خرید از فروشندهٔ نامعتبر. معیار کیفیت: رسید و قیمت روشن پیش از تراکنش، سقف روزانه و ممیزی لحظه‌ای.']},
+{id:'stalls',g:'غرفه و عمل',t:'سه غرفه و حساب سرانگشتی',r:['reality','plan'],x:['غرفه ۱ خدمت به عامل‌ها، غرفه ۲ دستیار برای کسب‌وکار، غرفه ۳ آماده‌سازی فروشگاه.','با قیمت ۰٫۰۱ دلار برای هر فراخوانی: ۱۰۰ فراخوانی در روز حدود ۳۰ دلار در ماه، ۱۰ هزار حدود ۳٬۰۰۰ دلار.','محاسبهٔ نمونه است، نه پیش‌بینی. درآمد از حجم می‌آید و حجم از دیده‌شدن و داده‌ای که کس دیگر ندارد. گارتنر پیش‌بینی کرده تا پایان ۲۰۲۶ حدود ۴۰٪ نرم‌افزارهای سازمانی عامل داشته باشند.']},
+{id:'plan',g:'غرفه و عمل',t:'برنامهٔ ۳۰ روزه',r:['stalls','pik'],x:['هفته ۱ ایده، هفته ۲ نمونه، هفته ۳ گفت‌وگو با ۱۰ مشتری، هفته ۴ قیمت و اولین فروش.','حرف‌زدن با ۱۰ مشتری از ساختن نمونهٔ بزرگ مهم‌تر است.','اگر بعد از ۱۰ گفت‌وگو کسی علاقه نشان نداد، ایده را عوض کنید نه قیمت را. وعدهٔ درآمد قطعی داده نمی‌شود.']}
+];
+const RG={report:'۱ · بازار را بفهم',pik:'۱ · بازار را بفهم',reality:'۱ · بازار را بفهم',doors:'۱ · بازار را بفهم',discover:'۲ · مسیر پول را بشناس',price:'۲ · مسیر پول را بشناس',mandate:'۲ · مسیر پول را بشناس',settle:'۲ · مسیر پول را بشناس',goods:'۲ · مسیر پول را بشناس',stalls:'۳ · غرفه‌ات را انتخاب کن',schools:'۳ · غرفه‌ات را انتخاب کن',stack:'۴ · قرارداد و مرز را ببند',contract:'۴ · قرارداد و مرز را ببند',redlines:'۴ · قرارداد و مرز را ببند',plan:'۵ · بفروش'};
+KB.forEach(k=>k.g=RG[k.id]);KB.sort((a,b)=>a.g<b.g?-1:a.g>b.g?1:0);
+const by=Object.fromEntries(KB.map(k=>[k.id,k]));
+let cur='pik',d=1;
+const $=id=>document.getElementById(id);
+function nav(){let g='',h='';KB.forEach(k=>{if(k.g!=g){g=k.g;h+='<h3>'+g+'</h3>'}h+=`<button data-i="${k.id}" class="${k.id==cur?'on':''}">${k.t}</button>`});$('nav').innerHTML=h;$('nav').querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.i))}
+function show(){const k=by[cur];$('rd').innerHTML=`<div class="kick">${k.g}</div><h1>${k.t}</h1>`+k.x.slice(0,d+1).map((t,i)=>`<p class="${i==2?'l2':''}"></p>`).join('')+`<div class="rel"><b>شاخه‌های مرتبط</b>${k.r.map(r=>`<button data-i="${r}">${by[r].t}</button>`).join('')}</div>`;
+ $('rd').querySelectorAll('p').forEach((p,i)=>p.textContent=k.x[i]);$('rd').querySelectorAll('.rel button').forEach(b=>b.onclick=()=>go(b.dataset.i))}
+function go(i){cur=i;nav();show()}
+$('depth').innerHTML=[0,1,2].map(i=>`<button data-d="${i}" class="${i==d?'on':''}">${fa([2,5,10][i])} دقیقه</button>`).join('');
+$('depth').querySelectorAll('button').forEach(b=>b.onclick=()=>{d=+b.dataset.d;$('depth').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x==b));show()});
+const norm=s=>s.replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/[\u200c‌]/g,' ').replace(/[۰-۹]/g,c=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(c)).toLowerCase();
+const tok=s=>norm(s).split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>1);
+function find(q){const T=tok(q);return KB.map(k=>{const tt=norm(k.t),bd=norm(k.x.join(' '));let s=0;T.forEach(w=>{if(tt.includes(w))s+=3;if(bd.includes(w))s+=1+(bd.split(w).length-1)*.2});return[s,k]}).filter(a=>a[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,4).map(a=>a[1])}
+const hist=[];
+async function ask(q,force){
+ const log=$('log'),u=document.createElement('div');u.className='m u';u.textContent=q;log.append(u);
+ const a=document.createElement('div');a.className='m a';a.textContent='در حال جست‌وجو در پایگاه دانش…';log.append(a);log.scrollTop=log.scrollHeight;
+ let hits=force?[by[cur],...by[cur].r.slice(0,2).map(r=>by[r])]:find(q);if(!hits.length)hits=[by[cur]];
+ const ctx=hits.map((k,i)=>`[${i+1}] ${k.t}: ${k.x.join(' ')}`+(PD[k.id]?` | هدف یادگیری: ${PD[k.id][0]} | تشبیه: ${PD[k.id][1]} | برداشت غلط رایج: ${PD[k.id][2]}`:'')).join('\n');
+ const sample=window.claude?await claude.use('sample'):(GM.assist&&TK?assistShim:null);
+ if(!sample){a.textContent='دستیار در این نمایش فعال نیست؛ مرتبط‌ترین گره‌ها در پایین آمده‌اند.'}
+ else{try{const msgs=[...hist,{role:'user',content:'تو دستیار آموزشی کارگاه «بازار عامل‌ها» هستی. فقط بر پایهٔ منابع زیر، به فارسی و حداکثر ۷ جمله؛ با لحن معلمی صبور: اول فکر اصلی در یک جمله، بعد یک تشبیه یا مثال ساده از منابع، و در پایان یک پرسش کوتاه برای سنجش فهم. سطح مخاطب: '+$('lv').value+'. اگر پاسخ در منابع نیست، صریح بگو «در پایگاه دانش نیست» و نظر شخصی نده. شمارهٔ منبع را مثل [۱] بیاور.'+(force?' برای این درخواست آموزشی می‌توانی قالب و تشبیه تازه بسازی، اما عدد یا ادعای واقعی تازه اضافه نکن.':'')+'\nمنابع:\n'+ctx+'\nپرسش: '+q}];
+  const r=await sample(msgs,{cache:false,onText:({text})=>{a.textContent=text}});a.textContent=r.text;
+  hist.push({role:'user',content:q},{role:'assistant',content:r.text});hist.splice(0,Math.max(0,hist.length-6))}
+ catch(e){a.textContent=e&&e.code=='rate_limited'?'تعداد درخواست‌ها زیاد است؛ کمی بعد دوباره بپرس.':'پاسخ دستیار در دسترس نیست؛ مرتبط‌ترین گره‌ها در پایین آمده‌اند.'}}
+ CH.push({u:force?'مدرس: '+q.split(': ')[0]:q,a:a.textContent,s:hits.map(k=>k.id)});push();const s=document.createElement('div');s.className='src';hits.forEach((k,i)=>{const b=document.createElement('button');b.textContent=fa(i+1)+' · '+k.t;b.onclick=()=>go(k.id);s.append(b)});a.append(s);log.scrollTop=log.scrollHeight}
+$('f').onsubmit=e=>{e.preventDefault();const q=$('q').value.trim();if(q){$('q').value='';ask(q)}};
+['پیک چرا سقف لازم دارد؟','فرق مکتب Coinbase و Enterprise چیست؟','اعداد واقعی بازار x402 چقدر است؟'].forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>ask(t);$('ch').append(b)});
+const fm=n=>fa(Number(n).toLocaleString('en-US',{maximumFractionDigits:2}));
+const fl=(l,id,v,t)=>`<label>${l}<input id="${id}" type="${t||'number'}" value="${v}" step="any"></label>`;
+$('sim').innerHTML=`<div class="cd"><h2>شبیه‌ساز ۴۰۲: پیک جلوی غرفه</h2><div class="fld">${fl('قیمت فروشنده (دلار)','p4',0.01)}${fl('سقف پیک (دلار)','c4',0.05)}<label>تکرار اثبات<select id="r4"><option value="1">بله</option><option value="0">خیر</option></select></label><button id="g4" class="on">اجرا</button></div><pre id="o4"></pre><p class="hint">درس: کنترل پیش از پرداخت است؛ اثبات یک‌بارمصرف جلوی پرداخت تکراری را می‌گیرد. شبیه‌سازی محلی است، نه پروتکل واقعی.</p></div>
+<div class="cd"><h2>کامپایلر قرارداد مأموریت</h2><div class="fld">${fl('عامل','a5','pik','text')}${fl('مأموریت','m5','buy market report','text')}${fl('سقف (دلار)','b5',5)}${fl('مدت (دقیقه)','t5',60)}<label>مکتب<select id="s5"><option value="enterprise">Enterprise</option><option value="coinbase">Coinbase</option><option value="web3">Web3</option></select></label></div><pre id="o5"></pre><button id="cp5">کپی JSON</button><p class="hint">مکتب را عوض کن و ببین کدام قواعد اضافه یا حذف می‌شود. در نمونه، آستانهٔ تأیید انسانی ۴۰٪ سقف است.</p></div>
+<div class="cd"><h2>ماشین‌حساب غرفه</h2><div class="fld">${fl('قیمت هر فراخوانی (دلار)','p6',0.01)}${fl('فراخوانی در روز','n6',1000)}${fl('هزینهٔ هر فراخوانی (دلار)','c6',0.002)}${fl('هزینهٔ ثابت ماهانه (دلار)','x6',20)}</div><div class="chips" id="pr6"></div><pre id="o6" style="direction:rtl;text-align:right"></pre><p class="hint">محاسبهٔ نمونه است، نه پیش‌بینی. اعداد را با غرفهٔ خودت جایگزین کن.</p></div>`;
+$('g4').onclick=()=>{const p=+$('p4').value,c=+$('c4').value,n=Math.random().toString(16).slice(2,10);const L=['[agent] GET /market-report','[seller] 402 Payment Required · price '+p+' · nonce '+n];if(p>c)L.push('[agent] price '+p+' > cap '+c+' → refuses, no payment');else{L.push('[agent] pays '+p+' within cap '+c,'[seller] payment verified','[agent] status 200 · data received');if($('r4').value=='1')L.push('[agent] replay same proof','[seller] 402 · invalid or reused')}$('o4').textContent=L.join('\n')};
+function comp(){const b=+$('b5').value||0,s=$('s5').value,o={agent:$('a5').value,school:s,mission:$('m5').value,budget_usd:b,ttl_minutes:+$('t5').value||0,replay_protection:true};if(s=='enterprise')Object.assign(o,{agent_owns_funds:false,approve_above_usd:+(b*.4).toFixed(2),audit_log:'immutable'});else if(s=='coinbase')Object.assign(o,{agent_owns_funds:true,wallet:'agent',audit_log:'standard',risk:'high'});else Object.assign(o,{agent_owns_funds:true,counterparties:'verified_agents_only',reputation_check:true,audit_log:'onchain',risk:'experimental'});$('o5').textContent=JSON.stringify(o,null,2)}
+['a5','m5','b5','t5','s5'].forEach(i=>$(i).oninput=comp);comp();
+$('cp5').onclick=async()=>{try{await navigator.clipboard.writeText($('o5').textContent);$('cp5').textContent='کپی شد'}catch(e){$('cp5').textContent='کپی نشد؛ متن را انتخاب کن'}};
+function calc(){const p=+$('p6').value,n=+$('n6').value,c=+$('c6').value,x=+$('x6').value,rev=p*n*30,cost=c*n*30+x,be=p>c?x/(30*(p-c)):null;$('o6').textContent='درآمد ماهانه: '+fm(rev)+' دلار\nهزینهٔ ماهانه: '+fm(cost)+' دلار\nسود ماهانه: '+fm(rev-cost)+' دلار\nسربه‌سر: '+(be===null?'قیمت از هزینهٔ هر فراخوانی بیشتر نیست':fm(Math.ceil(be))+' فراخوانی در روز')}
+['p6','n6','c6','x6'].forEach(i=>$(i).oninput=calc);
+[100,1000,10000,100000].forEach(v=>{const b=document.createElement('button');b.textContent=fa(v.toLocaleString('en-US'))+' فراخوانی';b.onclick=()=>{$('n6').value=v;calc()};$('pr6').append(b)});calc();
+const TP=[['سؤال برای مخاطب','یک سؤال باز و کوتاه برای مخاطب بنویس که او را به فکر درآمد از این گره وادار کند.'],['مثال تازه','یک مثال تازه و ملموس برای این گره بده.'],['خلاصهٔ ۳۰ ثانیه‌ای','این گره را در ۳۰ ثانیه برای مخاطب خلاصه کن.'],['اگر مخاطب گیج شد','با یک تشبیه ساده همین گره را دوباره توضیح بده.'],['نقش در درآمد غرفه','نقش این گره در درآمد غرفهٔ مخاطب چیست و اولین اقدام عملی او کدام است؟']];
+$('tch').innerHTML='<h2>نقشهٔ تدریس: ترتیب، دلیل و نشانهٔ فهم</h2><div id="tm"></div><h2>یاریگر مدرس برای گرهٔ فعلی</h2><div class="chips" id="tb"></div><div class="fld"><label>دقیقهٔ باقی‌مانده<input id="rm" type="number" value="60"></label><button id="pc">پیشنهاد عمق</button></div><p class="hint" id="ph"></p>';
+TP.push(['چرا این مرحله؟','توضیح بده مدرس در این گره به چه ترتیبی و به چه دلیل پیش می‌رود و چه نشانه‌ای می‌گوید مخاطب فهمیده است.'],['سنجش درک','سه پرسش سنجش با دشواری متفاوت بنویس و برای هر یک بگو پاسخ خوب چه نشانه‌ای دارد.'],['مثال عددی','همین گره را با یک مثال عددی ساده توضیح بده.']);TP.forEach(t=>{const b=document.createElement('button');b.textContent=t[0];b.onclick=()=>ask('گرهٔ «'+by[cur].t+'»: '+t[1],1);$('tb').append(b)});
+$('pc').onclick=()=>{const left=KB.length-KB.findIndex(k=>k.id==cur),per=(+$('rm').value||0)/left;d=per>=8?2:per>=4?1:0;$('depth').querySelectorAll('button').forEach((x,i)=>x.classList.toggle('on',i==d));show();$('ph').textContent='برای هر گرهٔ باقی‌مانده حدود '+fa(per.toFixed(1))+' دقیقه؛ عمق '+fa([2,5,10][d])+' دقیقه‌ای اعمال شد.'};
+function setMode(m){$('rd').hidden=$('tch').hidden=m!='n';$('sim').hidden=m!='s';$('mode').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.m==m));MODE=m;push()}
+$('mode').querySelectorAll('button').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
+const go0=go;go=function(i){if(!HOST){FOLLOW=false;$('bk').hidden=false}setMode('n');go0(i)};
+const PD={
+report:['بتواند بگوید گزارش چه نوع محصولی است و پنج بخش پیکره‌بندی پیک کدام‌اند.','مثل کارمند خریدی که با یک تأییدیه و سقف به بازار می‌رود تا برگهٔ قیمت‌ها را بخرد؛ گزارش همان برگه است.','«عامل یعنی فقط یک مدل هوش مصنوعی»؛ در عمل مدل یک بخش است و بدون ابزار، کیف‌پول و سیاست نمی‌تواند خرید کند.','اگر ابزار پرداخت را از پیک بگیریم، کدام بخش کار نمی‌افتد و چرا؟','ولی آیا این بازار واقعاً پول دارد؟'],
+pik:['بگوید پیک برای خرید به چه چهار چیز نیاز دارد: قیمت روشن، راه پرداخت، اطمینان و سقف.','پیک مسافری است بدون کیف پول که فقط یک کارت هدیه با سقف دارد.','«عامل مثل چت‌بات است که فقط جواب می‌دهد»؛ در حالی که عامل اقدام می‌کند و خرج می‌کند.','اگر پیک فردا ۵۰ خرید کند، کدام محدودیت جلویش را می‌گیرد؟','ولی دقیقاً چه چیزی می‌خرد؟ و در چه ساختاری کار می‌کند؟'],
+reality:['بتواند عدد خام و عدد تعدیل‌شده را از هم تشخیص دهد و بگوید چرا فرق دارند.','مثل شمردن رهگذران جلوی مغازه و شمردن مشتریان واقعی؛ هر دو عدد است ولی یکی پول است.','«تراکنش زیاد یعنی درآمد زیاد»؛ در حالی که حجم کوچک و متمرکز است.','چرا ۱۶۵ میلیون تراکنش فقط حدود ۱۹ میلیون دلار تعدیل‌شده می‌سازد؟','پس مانع‌های واقعی چیست؟'],
+doors:['سه مانع را نام ببرد: برگشت‌ناپذیری، هویت و اعتماد، دسترسی.','سه در قفل: کلید اول سقف، کلید دوم هویت امضاشده، کلید سوم مجوز قانونی.','«با باز شدن یک در، همه چیز حل می‌شود»؛ هر سه لازم‌اند.','کدام در برای کسب‌وکار شما جدی‌تر است و چرا؟','خب، پیک قدم‌به‌قدم چطور خرید می‌کند؟'],
+discover:['بگوید چرا غرفهٔ دیده‌نشده فروش ندارد.','مثل مغازه‌ای که روی نقشه نیست؛ هر قدر خوب باشد کسی نمی‌آید.','«MCP و A2A درآمد می‌سازند»؛ آن‌ها فقط کشف و اتصال‌اند.','کسب‌وکار شما چطور خودش را به یک ماشین معرفی می‌کند؟','پیدایش کردیم؛ حالا قیمت را چطور می‌فهمد؟'],
+price:['ترتیب قیمت، پرداخت، داده را به‌درستی بگوید.','دستگاه فروش خودکار: قیمت را نشان می‌دهد، سکه می‌گیرد، کالا می‌دهد.','«۴۰۲ یعنی خطا و فرایند خراب»؛ در این پروتکل یعنی «اول پرداخت کن».','چرا اثبات پرداخت باید یک‌بارمصرف باشد؟','قیمت را دید؛ اجازهٔ خرج از کجا می‌آید؟'],
+mandate:['سه جزء مهر اجازه را بگوید: موضوع، سقف، مدت.','وکالت‌نامهٔ محدود برای خرید فقط یک کالا، تا یک ساعت، با سقف مشخص.','«هویت عامل یعنی اجازهٔ خرج»؛ هویت و اجازه دو چیز جدا هستند.','اگر مدت تمام شد ولی سقف مانده، پیک می‌تواند بخرد؟','اجازه داریم؛ پول چطور جابه‌جا می‌شود و برگشتش چه می‌شود؟'],
+settle:['بگوید چرا برگشت‌ناپذیری کنترل پیش از پرداخت می‌خواهد.','پرداخت نقدی در برابر چک قابل‌بازگشت؛ نقد سریع‌تر است ولی اشتباهش پس‌گرفتنی نیست.','«استیبل‌کوین همیشه بهتر از کارت است»؛ برای هر کار ریل مناسبی هست.','برای ۱۰ هزار ریزپرداخت و یک خرید فروشگاهی، کدام ریل؟','پول رفت؛ کالای واقعی چطور خریده می‌شود؟'],
+goods:['تفاوت ACP و UCP را در یک جمله بگوید و بداند روی یک نام شرط نبندد.','دو شرکت پست با بستهٔ متفاوت؛ مهم آدرس درست و فهرست مرتب است.','«باید همین حالا یک پروتکل را انتخاب کنم»؛ داده و فید مرتب هر دو را پوشش می‌دهد.','فید محصول شما چه چیزی کم دارد؟','همهٔ این مسیر را در کدام مدل سازمانی ببندیم؟'],
+schools:['سه مکتب را با یک جمله از هم تفکیک کند و مکتب خودش را انتخاب کند.','سه مدل خانواده: بچه خودش پول دارد، بچه فقط خرج مجاز دارد، بچه‌ها بازار خودشان را می‌چینند.','«مکتب بهتر وجود دارد»؛ مکتب به اختیار و ریسک قابل‌قبول بستگی دارد.','کسب‌وکار شما به کدام مکتب نزدیک‌تر است و چرا؟','و غرفهٔ من از کدام در پول درمی‌آورد؟'],
+stalls:['بتواند یکی از سه غرفه را انتخاب و درآمد تقریبی‌اش را حساب کند.','هر غرفه یک مغازه است: مشتری، قیمت و هزینه مشخص.','«درآمد از قیمت می‌آید»؛ درآمد از حجم و دیده‌شدن می‌آید.','با ۱۰۰ فراخوانی در روز و قیمت ۰٫۰۱ دلار، درآمد ماهانه چقدر می‌شود؟','برای اینکه ایمن بماند چه لایه‌هایی لازم است؟'],
+stack:['پنج لایه را به ترتیب بگوید و هر ایستگاه را به یک لایه وصل کند.','ساختمان پنج‌طبقه؛ هر طبقه را ندیده بگیری، ساختمان فرو می‌ریزد.','«مجوز و حاکمیت یکی هستند»؛ مجوز پیش از عمل است و حاکمیت بعد از عمل.','مهر اجازه در کدام لایه است و چرا؟','همهٔ لایه‌ها را در یک قرارداد چطور بنویسیم؟'],
+contract:['بتواند قرارداد یک‌خطی بنویسد: مأموریت، سقف، مدت و مکتب.','قرارداد کار با پیمانکار: وظیفه، بودجه، مهلت و حق بازرسی.','«قرارداد فقط حقوقی است»؛ در اینجا ابزار اجرایی عامل است.','اگر مکتب را از Coinbase به Enterprise ببری، کدام خط قرارداد عوض می‌شود؟','قرارداد کجا نباید شکسته شود؟'],
+redlines:['چند خط قرمز را نام ببرد و بگوید چرا معیار کیفیت پیش از تراکنش است.','خط‌های قرمز مثل مرز بزرگ‌راه‌اند؛ سرعت را کم نمی‌کنند، از سقوط جلوگیری می‌کنند.','«خط قرمز کار را کند می‌کند»؛ بدون آن اولین پرداخت اشتباه اعتماد را از بین می‌برد.','کدام خط قرمز در غرفهٔ شما حیاتی‌تر است؟','حالا از کجا شروع کنم؟'],
+plan:['اولین اقدام هفتهٔ اول خود را به‌طور مشخص بنویسد.','مثل کاشتن تخم: هر هفته یک گام کوچک و قابل‌سنجش.','«باید ایدهٔ کامل بسازم»؛ گفتگو با ۱۰ مشتری از نمونهٔ بزرگ مهم‌تر است.','اولین اقدام شما تا فردا چیست؟','اولین اقدام شما تا فردا چیست؟']};
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;e.textContent=x;return e};
+function tmap(){const P=PD[cur],box=$('tm'),i=KB.findIndex(k=>k.id==cur),nx=KB[i+1];box.textContent='';
+const S=[['هدف یادگیری',P[0],'مخاطب بداند در پایان باید بتواند چه بگوید؛ بدون هدف همه‌چیز به یک اندازه مهم می‌شود.'],['قلاب و تشبیه',P[1],'مفهوم تازه به چیزی آشنا وصل شود تا فهمیده شود، نه حفظ.'],['توضیح','عمق فعلی: '+fa([2,5,10][d])+' دقیقه','زمان تعیین می‌کند چه بیاید؛ مسیر اصلی بریده نمی‌شود.'],['برداشت غلط رایج',P[2],'پیش از آنکه مخاطب غلط را بسازد، آن را نام ببر.'],['سنجش درک',P[3],'پاسخ را از خود مخاطب بگیر؛ نشانهٔ فهم این است که با کلمات خودش بگوید.'],['پل به گرهٔ بعد',P[4]+(nx?' ← بعدی: '+nx.t:''),'هر گره جواب پرسش گرهٔ قبل است؛ مسیر پیوسته می‌ماند.']];
+S.forEach((s,n)=>{const c=el('div','cd');c.append(el('b','',fa(n+1)+' · '+s[0]),el('p','',s[1]),el('p','hint','چرا؟ '+s[2]));box.append(c)});
+box.append(el('p','hint','اگر نفهمیدند: ساده‌تر بگو، تشبیهی تازه بیاور، مثال عددی بزن، و از مخاطب بخواه خودش بازگو کند.'))}
+const sh0=show;show=function(){sh0();tmap();push()};
+const GM=window.GM_CFG||{},Q=new URLSearchParams(location.search),HOST=Q.has('host'),ROOM=(Q.get('room')||'main').replace(/[^\w-]/g,'').slice(0,40)||'main';
+let MODE='n',CH=[],FOLLOW=true,LAST=null,TK=HOST?(sessionStorage.getItem('gmtk')||prompt('توکن مجری')||''):'';
+if(HOST&&TK)sessionStorage.setItem('gmtk',TK);
+if(!HOST)document.body.classList.add('view');
+const assistShim=async msgs=>{const r=await fetch(GM.assist,{method:'POST',headers:{'content-type':'application/json',authorization:'Bearer '+TK},body:JSON.stringify({messages:msgs})});if(!r.ok)throw new Error('assist');return await r.json()};
+const SI=['p4','c4','r4','a5','m5','b5','t5','s5','p6','n6','c6','x6'];
+let pt;function push(){if(!HOST||!GM.relay||!TK)return;clearTimeout(pt);pt=setTimeout(()=>{const sim={};SI.forEach(i=>sim[i]=$(i).value);fetch(GM.relay+'/room/'+ROOM+'/state',{method:'POST',headers:{authorization:'Bearer '+TK,'content-type':'application/json'},body:JSON.stringify({v:Date.now(),cur,d,mode:MODE,sim,o4:$('o4').textContent,chat:CH.slice(-30)})}).then(r=>{$('st').textContent=r.ok?'● پخش زنده':'● توکن یا رله نادرست'}).catch(()=>{$('st').textContent='● رله در دسترس نیست'})},250)}
+function apply(s){if(!FOLLOW||!s||!s.cur||!by[s.cur])return;cur=s.cur;d=s.d;$('depth').querySelectorAll('button').forEach((x,i)=>x.classList.toggle('on',i==d));setMode(s.mode||'n');nav();show();SI.forEach(i=>{if(s.sim&&s.sim[i]!=null)$(i).value=s.sim[i]});comp();calc();$('o4').textContent=s.o4||'';const lg=$('log');lg.textContent='';(s.chat||[]).forEach(c=>lg.append(el('div','m u',c.u),el('div','m a',c.a)));lg.scrollTop=lg.scrollHeight}
+if(!HOST&&GM.relay){const up=x=>{LAST=x;apply(x)};const conn=()=>{const w=new WebSocket(GM.relay.replace(/^http/,'ws')+'/room/'+ROOM+'/ws');w.onopen=()=>$('st').textContent='● زنده';w.onmessage=e=>{try{up(JSON.parse(e.data))}catch(x){}};w.onclose=()=>{$('st').textContent='● قطع؛ تلاش دوباره…';setTimeout(conn,3000)}};conn();setInterval(async()=>{if($('st').textContent.includes('زنده'))return;try{up(await(await fetch(GM.relay+'/room/'+ROOM+'/state')).json())}catch(e){}},8000)}
+$('bk').onclick=()=>{FOLLOW=true;$('bk').hidden=true;apply(LAST)};
+if(HOST&&GM.relay)$('st').textContent='● آمادهٔ پخش';
+$('sim').addEventListener('input',push);$('sim').addEventListener('click',()=>setTimeout(push,60));
+$('vb').onclick=()=>$('cl').showModal();
+nav();show();
+</script></body></html>

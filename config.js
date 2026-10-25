@@ -1,0 +1,1 @@
+window.GM_CFG={relay:'https://gm-relay.parviz-gateway1.workers.dev',assist:'https://gm-relay.parviz-gateway1.workers.dev/assist'};
