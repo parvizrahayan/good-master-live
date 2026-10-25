@@ -42,6 +42,7 @@ article p.l2{border-color:var(--go)}
 #q:focus-visible{outline:2px solid var(--cy)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}.chips button{font-size:12px;padding:3px 8px}
 [hidden]{display:none!important}
+#tk.dirty{background:var(--pk);color:#fff;border-color:var(--pk)}
 .view #tch,.view #f,.view #ch,.view #chat label,.view #mode,.view #depth{display:none!important}.view #sim input,.view #sim select,.view #sim button{pointer-events:none}.view #chat h2::after{content:" · مشاهده";color:var(--mu)}
 .sp{margin-top:18px;border-top:1px solid var(--ln);padding-top:14px}.sp h2{font-size:16px;color:var(--go);margin-bottom:8px}
 .fld{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;align-items:end}.fld label{font-size:13px;color:var(--mu);display:grid;gap:4px}
@@ -54,7 +55,7 @@ pre{background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:12
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
 <header><div class="brand">ارباب خوب · کارگاه زنده</div>
-<span id="st" class="hint"></span><button id="bk" hidden>برگشت به مجری</button><div class="seg" id="mode"><button data-m="n" class="on">گره‌ها</button><button data-m="s">شبیه‌سازها</button></div>
+<span id="st" class="hint"></span><button id="tk" hidden class="on">▶ اجرا در آنتن</button><button id="off" hidden>⏹ خروج از آنتن</button><button id="mt" hidden>مانیتور مخاطب</button><button id="bk" hidden>برگشت به مجری</button><div class="seg" id="mode"><button data-m="n" class="on">گره‌ها</button><button data-m="s">شبیه‌سازها</button></div>
 <div class="seg" id="depth" role="group" aria-label="عمق توضیح"></div></header>
 <main>
 <section><nav id="nav"></nav></section>
@@ -62,8 +63,10 @@ pre{background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:12
 <aside id="chat"><h2>دستیار پایگاه دانش</h2><div id="log" aria-live="polite"></div>
 <div><label class="hint">سطح مخاطب <select id="lv" style="font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:4px"><option>مبتدی و بدون پیش‌زمینه</option><option selected>کسب‌وکار</option><option>فنی</option></select></label><div class="chips" id="ch"></div><form id="f"><input id="q" placeholder="از پایگاه دانش بپرس…" autocomplete="off"><button class="on">بپرس</button></form></div></aside>
 </main>
-<footer style="padding:6px 20px;color:var(--mu);font-size:13px;display:flex;justify-content:space-between;align-items:center"><span>ارادتمند، پرویز معین</span><button id="vb" style="padding:2px 10px">v1</button></footer>
-<dialog id="cl" style="background:var(--pn);color:var(--tx);border:1px solid var(--go);border-radius:12px;padding:20px;max-width:420px"><h2 style="font-size:16px;color:var(--go)">تاریخچهٔ تغییرات</h2><p style="margin:10px 0">v1: نقشهٔ گره‌ها، شبیه‌سازها، نقشهٔ تدریس، دستیار پایگاه دانش، نمای زندهٔ مجری و مخاطب.</p><button onclick="this.closest('dialog').close()">بستن</button></dialog>
+<footer style="padding:6px 20px;color:var(--mu);font-size:13px;display:flex;justify-content:space-between;align-items:center"><span>ارادتمند، پرویز معین</span><button id="vb" style="padding:2px 10px">v2</button></footer>
+<dialog id="cl" style="background:var(--pn);color:var(--tx);border:1px solid var(--go);border-radius:12px;padding:20px;max-width:420px"><h2 style="font-size:16px;color:var(--go)">تاریخچهٔ تغییرات</h2><p style="margin:10px 0">v2: مدل آنتن؛ مجری دکمهٔ «اجرا» را می‌زند و مانیتور مخاطب دارد.</p><p style="margin:10px 0">v1: نقشهٔ گره‌ها، شبیه‌سازها، نقشهٔ تدریس، دستیار پایگاه دانش، نمای زندهٔ مجری و مخاطب.</p><button onclick="this.closest('dialog').close()">بستن</button></dialog>
+<div id="mon" hidden style="position:fixed;bottom:44px;left:12px;width:384px;height:216px;border:2px solid var(--go);border-radius:10px;overflow:hidden;background:var(--bg);z-index:20;direction:ltr"><iframe id="mf" title="مانیتور مخاطب" style="width:1280px;height:720px;border:0;transform:scale(.3);transform-origin:top left;pointer-events:none"></iframe></div>
+<div id="slate" hidden style="position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:30;font-size:24px;color:var(--go)">جلسه به‌زودی ادامه می‌یابد…</div>
 <script src="config.js"></script>
 <script>
 const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
@@ -160,11 +163,18 @@ if(HOST&&TK)sessionStorage.setItem('gmtk',TK);
 if(!HOST)document.body.classList.add('view');
 const assistShim=async msgs=>{const r=await fetch(GM.assist,{method:'POST',headers:{'content-type':'application/json',authorization:'Bearer '+TK},body:JSON.stringify({messages:msgs})});if(!r.ok)throw new Error('assist');return await r.json()};
 const SI=['p4','c4','r4','a5','m5','b5','t5','s5','p6','n6','c6','x6'];
-let pt;function push(){if(!HOST||!GM.relay||!TK)return;clearTimeout(pt);pt=setTimeout(()=>{const sim={};SI.forEach(i=>sim[i]=$(i).value);fetch(GM.relay+'/room/'+ROOM+'/state',{method:'POST',headers:{authorization:'Bearer '+TK,'content-type':'application/json'},body:JSON.stringify({v:Date.now(),cur,d,mode:MODE,sim,o4:$('o4').textContent,chat:CH.slice(-30)})}).then(r=>{$('st').textContent=r.ok?'● پخش زنده':'● توکن یا رله نادرست'}).catch(()=>{$('st').textContent='● رله در دسترس نیست'})},250)}
-function apply(s){if(!FOLLOW||!s||!s.cur||!by[s.cur])return;cur=s.cur;d=s.d;$('depth').querySelectorAll('button').forEach((x,i)=>x.classList.toggle('on',i==d));setMode(s.mode||'n');nav();show();SI.forEach(i=>{if(s.sim&&s.sim[i]!=null)$(i).value=s.sim[i]});comp();calc();$('o4').textContent=s.o4||'';const lg=$('log');lg.textContent='';(s.chat||[]).forEach(c=>lg.append(el('div','m u',c.u),el('div','m a',c.a)));lg.scrollTop=lg.scrollHeight}
-if(!HOST&&GM.relay){const up=x=>{LAST=x;apply(x)};const conn=()=>{const w=new WebSocket(GM.relay.replace(/^http/,'ws')+'/room/'+ROOM+'/ws');w.onopen=()=>$('st').textContent='● زنده';w.onmessage=e=>{try{up(JSON.parse(e.data))}catch(x){}};w.onclose=()=>{$('st').textContent='● قطع؛ تلاش دوباره…';setTimeout(conn,3000)}};conn();setInterval(async()=>{if($('st').textContent.includes('زنده'))return;try{up(await(await fetch(GM.relay+'/room/'+ROOM+'/state')).json())}catch(e){}},8000)}
+function snap(){const sim={};SI.forEach(i=>sim[i]=$(i).value);return{cur,d,mode:MODE,sim,o4:$('o4').textContent,chat:CH.slice(-30)}}
+let TAKEN='';
+function post(o){if(!GM.relay||!TK)return Promise.resolve(false);return fetch(GM.relay+'/room/'+ROOM+'/state',{method:'POST',headers:{authorization:'Bearer '+TK,'content-type':'application/json'},body:JSON.stringify({v:Date.now(),...o})}).then(r=>{$('st').textContent=r.ok?'● در آنتن':'● توکن یا رله نادرست';return r.ok}).catch(()=>{$('st').textContent='● رله در دسترس نیست';return false})}
+function push(){if(!HOST)return;$('tk').classList.toggle('dirty',JSON.stringify(snap())!=TAKEN)}
+async function take(){const x=snap();if(await post(x)){TAKEN=JSON.stringify(x);$('tk').classList.remove('dirty');if(!$('mon').hidden)$('mf').contentWindow.postMessage('r','*')}}
+function apply(s){$('slate').hidden=!!(s&&s.cur&&!s.off);if(!s||s.off||!s.cur)return;if(!FOLLOW||!by[s.cur])return;cur=s.cur;d=s.d;$('depth').querySelectorAll('button').forEach((x,i)=>x.classList.toggle('on',i==d));setMode(s.mode||'n');nav();show();SI.forEach(i=>{if(s.sim&&s.sim[i]!=null)$(i).value=s.sim[i]});comp();calc();$('o4').textContent=s.o4||'';const lg=$('log');lg.textContent='';(s.chat||[]).forEach(c=>lg.append(el('div','m u',c.u),el('div','m a',c.a)));lg.scrollTop=lg.scrollHeight}
+if(!HOST&&GM.relay){let LV=0;const up=x=>{if(x&&x.v&&x.v<=LV)return;if(x&&x.v)LV=x.v;LAST=x;$('st').textContent='● زنده · '+new Date().toLocaleTimeString('fa-IR');apply(x)};const conn=()=>{const w=new WebSocket(GM.relay.replace(/^http/,'ws')+'/room/'+ROOM+'/ws');w.onopen=()=>$('st').textContent='● زنده';w.onmessage=e=>{try{up(JSON.parse(e.data))}catch(x){}};w.onclose=()=>{$('st').textContent='● قطع؛ تلاش دوباره…';setTimeout(conn,3000)}};conn();const pl=async()=>{try{up(await(await fetch(GM.relay+'/room/'+ROOM+'/state',{cache:'no-store'})).json())}catch(e){}};pl();setInterval(pl,10000)}
 $('bk').onclick=()=>{FOLLOW=true;$('bk').hidden=true;apply(LAST)};
-if(HOST&&GM.relay)$('st').textContent='● آمادهٔ پخش';
+if(HOST){['tk','off','mt'].forEach(i=>$(i).hidden=false);if(GM.relay)$('st').textContent='● آماده؛ هنوز در آنتن نیست'}
+$('tk').onclick=take;$('off').onclick=()=>post({off:true});
+$('mt').onclick=()=>{const m=$('mon');m.hidden=!m.hidden;if(!m.hidden&&!$('mf').getAttribute('src'))$('mf').setAttribute('src',location.pathname+'?room='+ROOM)};
+addEventListener('keydown',e=>{if(HOST&&e.ctrlKey&&e.key=='Enter')take()});
 $('sim').addEventListener('input',push);$('sim').addEventListener('click',()=>setTimeout(push,60));
 $('vb').onclick=()=>$('cl').showModal();
 nav();show();
